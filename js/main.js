@@ -1,5 +1,4 @@
 // Результат: целое число из диапазона "от...до"
-
 const getRandomNumber = (min, max) => {
   if (min >= 0 && max > min) {
     const randomNumber = Math.round(Math.random() * (max - min + 1)) + min;
@@ -11,7 +10,7 @@ const getRandomNumber = (min, max) => {
   }
 
   return min;
- };
+};
 
 getRandomNumber(16, 12);
 
