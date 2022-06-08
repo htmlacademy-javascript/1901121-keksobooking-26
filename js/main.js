@@ -29,10 +29,8 @@ const getGeoCoordinates = (min, max, amount) => {
     return geoNumberResult;
   }
 
-  const geoNumber = min;
-  const geoNumberResult = geoNumber.toFixed(amount);
+  const geoNumberResult = min.toFixed(amount);
   return geoNumberResult;
-
 };
 
 getGeoCoordinates(1.2, 1.8, 5);
