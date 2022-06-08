@@ -9,8 +9,8 @@ const getRandomNumber = (min, max) => {
     const randomNumber = Math.round(Math.random() * (min - max)) + max;
     return randomNumber;
   }
-  const randomNumber = min;
-  return randomNumber;
+
+  return min;
  };
 
 getRandomNumber(16, 12);
@@ -29,8 +29,7 @@ const getGeoCoordinates = (min, max, amount) => {
     return geoNumberResult;
   }
 
-  const geoNumberResult = min.toFixed(amount);
-  return geoNumberResult;
+  return min.toFixed(amount);
 };
 
 getGeoCoordinates(1.2, 1.8, 5);
