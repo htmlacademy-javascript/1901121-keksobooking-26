@@ -1,9 +1,5 @@
 // Результат: целое число из диапазона "от...до"
 
-const sayHi = (message) => {
-  console.log(`Результат: ${message}`);
-};
-
 const getRandomNumber = (min, max) => {
   if ((min >= 0) & (max > min)) {
     const randomNumber = Math.round(Math.random() * (max - min + 1)) + min;
@@ -19,7 +15,7 @@ const getRandomNumber = (min, max) => {
   }
 };
 
-sayHi(getRandomNumber(16, 12));
+getRandomNumber(16, 12);
 
 
 // Результат: число с плавающей точкой из диапазона "от...до" с указанным "количеством знаков после запятой"
@@ -41,4 +37,4 @@ const getGeoCoordinates = (min, max, amount) => {
   }
 };
 
-sayHi(getGeoCoordinates(1.2, 1.8, 5));
+getGeoCoordinates(1.2, 1.8, 5);
