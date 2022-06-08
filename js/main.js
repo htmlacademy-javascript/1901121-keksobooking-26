@@ -26,17 +26,17 @@ sayHi(getRandomNumber(16, 12));
 const getGeoCoordinates = (min, max, amount) => {
   if ((min >= 0) & (max > min)) {
     const geoNumber = Math.random() * (max - min) + min;
-    geoNumberResult = geoNumber.toFixed(amount);
+    const geoNumberResult = geoNumber.toFixed(amount);
     return geoNumberResult;
   };
   if (max < min) {
     const geoNumber = Math.round(Math.random() * (min - max)) + max;
-    geoNumberResult = geoNumber.toFixed(amount);
+    const geoNumberResult = geoNumber.toFixed(amount);
     return geoNumberResult;
   };
   if (min = max) {
     const geoNumber = min;
-    geoNumberResult = geoNumber.toFixed(amount);
+    const geoNumberResult = geoNumber.toFixed(amount);
     return geoNumberResult;
   };
 }
