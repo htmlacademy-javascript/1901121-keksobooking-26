@@ -8,15 +8,15 @@ const getRandomNumber = (min, max) => {
   if ((min >= 0) & (max > min)) {
     const randomNumber = Math.round(Math.random() * (max - min + 1)) + min;
     return randomNumber;
-  };
+  }
   if (max < min) {
     const randomNumber = Math.round(Math.random() * (min - max)) + max;
     return randomNumber;
-  };
-  if (min = max) {
+  }
+  else {
     const randomNumber = min;
     return randomNumber;
-  };
+  }
 }
 
 sayHi(getRandomNumber(16, 12));
@@ -28,17 +28,17 @@ const getGeoCoordinates = (min, max, amount) => {
     const geoNumber = Math.random() * (max - min) + min;
     const geoNumberResult = geoNumber.toFixed(amount);
     return geoNumberResult;
-  };
+  }
   if (max < min) {
     const geoNumber = Math.round(Math.random() * (min - max)) + max;
     const geoNumberResult = geoNumber.toFixed(amount);
     return geoNumberResult;
-  };
-  if (min = max) {
+  }
+  else {
     const geoNumber = min;
     const geoNumberResult = geoNumber.toFixed(amount);
     return geoNumberResult;
-  };
+  }
 }
 
 sayHi(getGeoCoordinates(1.2, 1.8, 5));
