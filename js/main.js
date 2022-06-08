@@ -2,7 +2,7 @@
 
 const sayHi = (message) => {
   console.log(`Результат: ${message}`);
-}
+};
 
 const getRandomNumber = (min, max) => {
   if ((min >= 0) & (max > min)) {
@@ -17,7 +17,7 @@ const getRandomNumber = (min, max) => {
     const randomNumber = min;
     return randomNumber;
   }
-}
+};
 
 sayHi(getRandomNumber(16, 12));
 
@@ -39,6 +39,6 @@ const getGeoCoordinates = (min, max, amount) => {
     const geoNumberResult = geoNumber.toFixed(amount);
     return geoNumberResult;
   }
-}
+};
 
 sayHi(getGeoCoordinates(1.2, 1.8, 5));
