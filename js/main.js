@@ -23,6 +23,9 @@ const getGeoCoordinates = (min, max, amount) => {
   if (max < min) {
     return getGeoCoordinates(Math.abs(max), Math.abs(min), amount);
   }
+  if (max === min) {
+    return parseFloat(min.toFixed(amount));
+  }
   const geoNumber = Math.random() * (max - min) + min;
   return parseFloat(geoNumber.toFixed(amount));
 };
