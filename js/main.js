@@ -1,15 +1,15 @@
 // Результат: целое число из диапазона "от...до"
 const getRandomNumber = (min, max) => {
-  if (min >= 0 && max > min) {
-    const randomNumber = Math.round(Math.random() * (max - min + 1)) + min;
-    return randomNumber;
+  if (min < 0 || max < 0) {
+    return getRandomNumber(Math.abs(min), Math.abs(max));
+  }
+  if (max === min) {
+    return min;
   }
   if (max < min) {
-    const randomNumber = Math.round(Math.random() * (min - max)) + max;
-    return randomNumber;
+    return getRandomNumber(max, min);
   }
-
-  return min;
+  return Math.round(Math.random() * (min - max)) + max;
 };
 
 getRandomNumber(16, 12);
@@ -17,18 +17,15 @@ getRandomNumber(16, 12);
 
 // Результат: число с плавающей точкой из диапазона "от...до" с указанным "количеством знаков после запятой"
 const getGeoCoordinates = (min, max, amount) => {
-  if (min >= 0 && max > min) {
-    const geoNumber = Math.random() * (max - min) + min;
-    const geoNumberResult = geoNumber.toFixed(amount);
-    return geoNumberResult;
+  if (min < 0 || max < 0) {
+    return getGeoCoordinates(Math.abs(min), Math.abs(max), amount);
   }
   if (max < min) {
-    const geoNumber = Math.round(Math.random() * (min - max)) + max;
-    const geoNumberResult = geoNumber.toFixed(amount);
-    return geoNumberResult;
+    return getGeoCoordinates(Math.abs(max), Math.abs(min), amount);
   }
-
-  return min.toFixed(amount);
+  const geoNumber = Math.random() * (max - min) + min;
+  const geoNumberResult = geoNumber.toFixed(amount);
+  return parseFloat(geoNumberResult);
 };
 
-getGeoCoordinates(1.2, 1.8, 5);
+getGeoCoordinates(1.9, 1.8, 5);
