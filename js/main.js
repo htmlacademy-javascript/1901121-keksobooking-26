@@ -21,7 +21,7 @@ const getGeoCoordinates = (min, max, amount) => {
     return getGeoCoordinates(Math.abs(min), Math.abs(max), amount);
   }
   if (max < min) {
-    return getGeoCoordinates(Math.abs(max), Math.abs(min), amount);
+    return getGeoCoordinates(max, min, amount);
   }
   if (max === min) {
     return parseFloat(min.toFixed(amount));
