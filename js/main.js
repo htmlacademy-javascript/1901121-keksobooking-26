@@ -24,8 +24,7 @@ const getGeoCoordinates = (min, max, amount) => {
     return getGeoCoordinates(Math.abs(max), Math.abs(min), amount);
   }
   const geoNumber = Math.random() * (max - min) + min;
-  const geoNumberResult = geoNumber.toFixed(amount);
-  return parseFloat(geoNumberResult);
+  return parseFloat(geoNumber.toFixed(amount));
 };
 
 getGeoCoordinates(1.9, 1.8, 5);
